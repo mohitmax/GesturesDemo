@@ -1,5 +1,5 @@
 //
-//  SecondViewController.h
+//  TapViewController.h
 //  GesturesDemo
 //
 //  Created by Mohit Sadhu on 1/22/15.
@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SecondViewController : UIViewController
+@interface TapViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UIView *testView;
 
 @end
-
