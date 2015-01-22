@@ -24,8 +24,21 @@
     UISwipeGestureRecognizer *swipeleft = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeToLeft:)];
     swipeleft.direction = UISwipeGestureRecognizerDirectionLeft;
     
-    [self.view addGestureRecognizer:swipeRight];
-    [self.view addGestureRecognizer:swipeleft];
+    [self.centerView addGestureRecognizer:swipeleft];
+    [self.centerView addGestureRecognizer:swipeRight];
+    
+    
+    UISwipeGestureRecognizer *swipeleftViewToCenterView = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeToLeft:)];
+    swipeleftViewToCenterView.direction = UISwipeGestureRecognizerDirectionLeft;
+    [self.leftView addGestureRecognizer:swipeleftViewToCenterView];
+    
+    
+    UISwipeGestureRecognizer *swipeRightViewToCenterView = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeToRight:)];
+    swipeRightViewToCenterView.direction = UISwipeGestureRecognizerDirectionRight;
+    [self.rightView addGestureRecognizer:swipeRightViewToCenterView];
+    
+//    [self.view addGestureRecognizer:swipeRight];
+//    [self.view addGestureRecognizer:swipeleft];
 }
 
 - (void)swipeToRight: (UISwipeGestureRecognizer *)swipeGesture
