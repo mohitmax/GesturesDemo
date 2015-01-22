@@ -10,4 +10,8 @@
 
 @interface SwipeViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UIView *leftView;
+@property (strong, nonatomic) IBOutlet UIView *centerView;
+@property (strong, nonatomic) IBOutlet UIView *rightView;
+
 @end

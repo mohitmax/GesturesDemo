@@ -14,9 +14,40 @@
 
 @implementation SwipeViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    UISwipeGestureRecognizer *swipeRight = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeToRight:)];
+    swipeRight.direction = UISwipeGestureRecognizerDirectionRight;
+    
+    UISwipeGestureRecognizer *swipeleft = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeToLeft:)];
+    swipeleft.direction = UISwipeGestureRecognizerDirectionLeft;
+    
+    [self.view addGestureRecognizer:swipeRight];
+    [self.view addGestureRecognizer:swipeleft];
+}
+
+- (void)swipeToRight: (UISwipeGestureRecognizer *)swipeGesture
+{
+    [UIView animateWithDuration:0.8
+                     animations:^()
+                                {
+                                    self.centerView.frame = CGRectOffset(self.centerView.frame, 320.0, 0.0);
+                                    self.leftView.frame = CGRectOffset(self.leftView.frame, 320.0, 0.0);
+                                    self.rightView.frame = CGRectOffset(self.rightView.frame, 320.0, 0.0);
+                                }];
+}
+
+- (void)swipeToLeft: (UISwipeGestureRecognizer *)swipeGesture
+{
+    [UIView animateWithDuration:0.5
+                     animations:^()
+     {
+         self.centerView.frame = CGRectOffset(self.centerView.frame, -320.0, 0.0);
+         self.leftView.frame = CGRectOffset(self.leftView.frame, -320.0, 0.0);
+         self.rightView.frame = CGRectOffset(self.rightView.frame, -320.0, 0.0);
+     }];
 }
 
 - (void)didReceiveMemoryWarning {
