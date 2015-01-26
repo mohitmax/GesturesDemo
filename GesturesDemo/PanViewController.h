@@ -10,4 +10,8 @@
 
 @interface PanViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UIView *testView;
+@property (strong, nonatomic) IBOutlet UILabel *horizontalVelocityLabel;
+@property (strong, nonatomic) IBOutlet UILabel *verticalVelocityLabel;
+
 @end

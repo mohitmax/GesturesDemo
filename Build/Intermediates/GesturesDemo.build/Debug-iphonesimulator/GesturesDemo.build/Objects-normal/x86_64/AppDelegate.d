@@ -1,3 +1,3 @@
 dependencies: \
-  /Users/msadhu/Documents/ios7_DIY_Projects/GesturesDemo/GesturesDemo/AppDelegate.m \
-  /Users/msadhu/Documents/ios7_DIY_Projects/GesturesDemo/GesturesDemo/AppDelegate.h
+  /Users/mohitmax/Documents/iOS-DIY/GesturesDemo/GesturesDemo/AppDelegate.m \
+  /Users/mohitmax/Documents/iOS-DIY/GesturesDemo/GesturesDemo/AppDelegate.h

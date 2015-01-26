@@ -10,4 +10,6 @@
 
 @interface PinchViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UIView *testView;
+
 @end

@@ -29,6 +29,9 @@
     doubleTapGestureRecognizer.numberOfTapsRequired = 2;
     doubleTapGestureRecognizer.numberOfTouchesRequired = 2;
     [self.view addGestureRecognizer:doubleTapGestureRecognizer];
+    
+    UILongPressGestureRecognizer *longPressGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleLongPressGestureWithRecognizer:)];
+    [self.testView addGestureRecognizer:longPressGesture];
 
 }
 
@@ -60,6 +63,20 @@
     
     self.testView.frame = CGRectMake(self.testView.frame.origin.x, self.testView.frame.origin.y, newSize.width, newSize.height);
     self.testView.center = currentCenter;
+}
+
+- (void)handleLongPressGestureWithRecognizer: (UILongPressGestureRecognizer *)longPressGesture
+{
+    longPressGesture.minimumPressDuration = 1.0;
+    longPressGesture.numberOfTouchesRequired = 1;
+    longPressGesture.allowableMovement = 0.0;
+    
+    NSLog(@"Long Press Handled");
+    
+    if (self.testView.backgroundColor != [UIColor greenColor])
+    {
+        self.testView.backgroundColor = [UIColor greenColor];
+    }
 }
 
 @end

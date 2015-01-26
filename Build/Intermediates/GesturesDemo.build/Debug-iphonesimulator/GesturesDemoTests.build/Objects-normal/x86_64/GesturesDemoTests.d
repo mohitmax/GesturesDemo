@@ -1,5 +1,5 @@
 dependencies: \
-  /Users/msadhu/Documents/ios7_DIY_Projects/GesturesDemo/GesturesDemoTests/GesturesDemoTests.m \
+  /Users/mohitmax/Documents/iOS-DIY/GesturesDemo/GesturesDemoTests/GesturesDemoTests.m \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestSuiteRun.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestSuite.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestProbe.h \

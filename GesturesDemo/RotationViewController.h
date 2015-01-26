@@ -10,4 +10,6 @@
 
 @interface RotationViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UIView *testView;
+
 @end
